@@ -1,0 +1,12 @@
+.color {
+	&--white {
+		color: $color-white;
+	}
+
+	&--black {
+		color: $color-black;
+	}
+	&--gray {
+		color: $color-gray;
+	}
+}

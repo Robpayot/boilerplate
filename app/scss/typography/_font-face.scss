@@ -1,0 +1,47 @@
+/* ------------------------------------------------------------------ */
+/*        FONT FACE DECLARATION
+/* ------------------------------------------------------------------ */
+
+// Exemple
+// @font-face {
+// 	font-family: 'GT-Walsheim';
+// 	src: url('../fonts/gt-walsheim-regular.woff') format('woff'),
+// 		 url('../fonts/gt-walsheim-regular.ttf') format('truetype');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+
+
+/* ------------------------------------------------------------------ */
+/*        VARIABLES DECLARATION
+/* ------------------------------------------------------------------ */
+
+
+%Regular {
+	@extend %smooth; // Optionnal
+	font-family: 'Roboto Slab', serif;
+}
+
+%Light {
+	@extend %smooth; // Optionnal
+	font-family: 'Roboto Slab', serif;
+	font-weight: 300;
+}
+
+%Bold {
+	@extend %smooth; // Optionnal
+	font-family: 'Roboto Slab', serif;
+	font-weight: 700;
+}
+
+/* ------------------------------------------------------------------ */
+/*        APPLY TO ALL CLASS
+/* ------------------------------------------------------------------ */
+
+[class*="--light"] {
+	@extend %Light;
+}
+
+[class*="--bold"] {
+	@extend %Bold;
+}

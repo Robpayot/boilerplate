@@ -1,0 +1,22 @@
+.article {
+
+    &__hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__content {
+        padding: 0 5rem;
+
+        &__wrapper {
+            width: 100%;
+            margin: 0 auto;
+            max-width: 110rem;
+        }
+
+        &__top {
+            display: flex;
+        }
+    }
+}

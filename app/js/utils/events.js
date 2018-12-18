@@ -1,0 +1,7 @@
+export const PAGE = 'PAGE'
+export const SCROLL = 'SCROLL'
+export const RAF = 'RAF'
+export const VIEW_NEXT = 'VIEW_NEXT'
+export const WINDOW_RESIZE = 'WINDOW_RESIZE'
+export const MOUSE_MOVE = 'MOUSE_MOVE'
+export const VIEW_DESTROYED = 'VIEW_DESTROYED'
