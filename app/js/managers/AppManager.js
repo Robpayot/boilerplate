@@ -10,17 +10,12 @@ class AppManager {
 
 		console.log('app manager')
 
-		this.bind()
-
 		this.handleResize()
 
 	}
 
-	bind() {
-		this.start = this.start.bind(this)
-	}
-
-	start() {
+	start = () => {
+		console.log('start')
 
 		// No routes, only one view
 

@@ -5,7 +5,7 @@ export default class MasterView {
 		this.el = document.body
 
 		this.ui = {
-			sections: this.el.querySelectorAll('.section')
+			sections: this.el.querySelectorAll('.section'),
 		}
 
 	}
