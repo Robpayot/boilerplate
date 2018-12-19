@@ -1,22 +1,22 @@
 {
-  "name": "cnn_travel",
+  "name": "boilerplate",
   "version": "1.0.0",
-  "description": "cnn landing page",
+  "description": "boilerplate",
   "main": "webpack.dev.js",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.dev.js",
+    "start": "webpack-dev-server --config --open webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Robpayot/cnn_travel.git"
+    "url": "git+https://github.com/Robpayot/boilerplate.git"
   },
   "author": "Robin Payot",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Robpayot/cnn_travel/issues"
+    "url": "https://github.com/Robpayot/boilerplate/issues"
   },
-  "homepage": "https://github.com/Robpayot/cnn_travel#readme",
+  "homepage": "https://github.com/Robpayot/boilerplate#readme",
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/plugin-proposal-class-properties": "^7.2.1",
