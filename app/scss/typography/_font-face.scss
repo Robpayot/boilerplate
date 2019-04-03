@@ -4,11 +4,11 @@
 
 // Exemple
 // @font-face {
-// 	font-family: 'GT-Walsheim';
-// 	src: url('../fonts/gt-walsheim-regular.woff') format('woff'),
-// 		 url('../fonts/gt-walsheim-regular.ttf') format('truetype');
-// 	font-weight: normal;
-// 	font-style: normal;
+//  font-family: 'GT-Walsheim';
+//  src: url('../fonts/gt-walsheim-regular.woff') format('woff'),
+//     url('../fonts/gt-walsheim-regular.ttf') format('truetype');
+//  font-weight: normal;
+//  font-style: normal;
 // }
 
 
@@ -18,20 +18,21 @@
 
 
 %Regular {
-	@extend %smooth; // Optionnal
-	font-family: 'Roboto Slab', serif;
+  @extend %smooth; // Optionnal
+
+  font-family: 'Roboto Slab', serif;
 }
 
 %Light {
-	@extend %smooth; // Optionnal
-	font-family: 'Roboto Slab', serif;
-	font-weight: 300;
+  @extend %smooth; // Optionnal
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
 }
 
 %Bold {
-	@extend %smooth; // Optionnal
-	font-family: 'Roboto Slab', serif;
-	font-weight: 700;
+  @extend %smooth; // Optionnal
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
 }
 
 /* ------------------------------------------------------------------ */
@@ -39,9 +40,9 @@
 /* ------------------------------------------------------------------ */
 
 [class*="--light"] {
-	@extend %Light;
+  @extend %Light;
 }
 
 [class*="--bold"] {
-	@extend %Bold;
+  @extend %Bold;
 }

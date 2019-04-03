@@ -1,32 +1,32 @@
 [class*="text"] {
-    line-height: 1.6em;
-    letter-spacing: 0.02em;
+  letter-spacing: 0.02em;
+  line-height: 1.6em;
 
-    @include mobile {
-        line-height: 1.4em;
-    }
+  @include mobile {
+    line-height: 1.4em;
+  }
 }
 
 [class*="-16"] {
-    font-size: 1.6rem;
+  font-size: 1.6rem;
 }
 
 [class*="-26"] {
-    font-size: 2.6rem;
+  font-size: 2.6rem;
 }
 
 [class*="-36"] {
-    font-size: 3.6rem;
+  font-size: 3.6rem;
 }
 
 [class*="-120"] {
-    font-size: 12.0rem;
+  font-size: 12.0rem;
 }
 
 .text-hollow {
-    white-space: nowrap;
-	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: white;
-	-webkit-text-fill-color: transparent;
-    line-height: 1em;
+  line-height: 1em;
+  white-space: nowrap;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 1px;
 }

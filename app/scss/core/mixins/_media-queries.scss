@@ -3,31 +3,31 @@
 /* ------------------------------------------------------------------ */
 
 @mixin small-mobile {
-    @media screen and (max-width: $breakpoint-small-mobile) {
-        @content;
-    }
+  @media screen and (max-width: $breakpoint-small-mobile) {
+    @content;
+  }
 }
 
 @mixin mobile {
-    @media screen and (max-width: $breakpoint-mobile) {
-        @content;
-    }
+  @media screen and (max-width: $breakpoint-mobile) {
+    @content;
+  }
 }
 
 @mixin tablet {
-    @media screen and (max-width: $breakpoint-tablet) {
-        @content;
-    }
+  @media screen and (max-width: $breakpoint-tablet) {
+    @content;
+  }
 }
 
 @mixin small-desktop {
-    @media screen and (max-width: $breakpoint-desktop) {
-        @content;
-    }
+  @media screen and (max-width: $breakpoint-desktop) {
+    @content;
+  }
 }
 
 @mixin small-height {
-    @media screen and (max-height: $breakpoint-height) {
-        @content;
-    }
+  @media screen and (max-height: $breakpoint-height) {
+    @content;
+  }
 }
