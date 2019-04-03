@@ -3,6 +3,8 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 
+// https://github.com/alleyinteractive/sasslint-webpack-plugin --> add this next time
+
 module.exports = {
 	entry: './app/js/app.js',
 	plugins: [
