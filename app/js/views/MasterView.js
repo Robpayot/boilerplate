@@ -1,13 +1,9 @@
 export default class MasterView {
+  constructor() {
+    this.el = document.body
 
-	constructor() {
-
-		this.el = document.body
-
-		this.ui = {
-			sections: this.el.querySelectorAll('.section'),
-		}
-
-	}
-
+    this.ui = {
+      sections: this.el.querySelectorAll('.section'),
+    }
+  }
 }
