@@ -38,7 +38,7 @@
           0
       ],
       "max-len": [
-          2,
+          1,
           {"code": 80}
       ],
       "class-methods-use-this": [

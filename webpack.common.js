@@ -21,6 +21,10 @@ module.exports = {
 	module: {
 		rules: [{
       enforce: "pre",
+      test: /\.scss$/,
+      loader: "import-glob-loader"
+    }, {
+      enforce: "pre",
       test: /\.js$/,
       exclude: /node_modules/,
       loader: "eslint-loader"
