@@ -4,36 +4,36 @@
 /* ------------------------------------------------------------------ */
 
 %clearfix {
-    zoom: 1;
+  zoom: 1;
 
-    &:before,
-    &:after {
-        content: ".";
-        display: block;
-        height: 0;
-        overflow: hidden;
-    }
+  &:before,
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
 
-    &:after {
-        clear: both;
-    }
+  &:after {
+    clear: both;
+  }
 }
 
 /* ------------------------------------------------------------------ */
-/*		BUTTON
+/*      BUTTON
 /* ------------------------------------------------------------------ */
 
 %reset-button {
-	appearance:none;
-	outline:none;
-	border:0;
-	margin:0;
-	padding:0;
-	background:none;
-	font:inherit;
-	color:inherit;
-	text-align:inherit;
-	cursor:pointer;
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  text-align: inherit;
+  appearance: none;
 }
 
 /* ------------------------------------------------------------------ */
@@ -41,7 +41,7 @@
 /* ------------------------------------------------------------------ */
 
 %border-box {
-    box-sizing:border-box;
+  box-sizing: border-box;
 }
 
 /* ------------------------------------------------------------------ */
@@ -49,13 +49,13 @@
 /* ------------------------------------------------------------------ */
 
 %smooth {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 %smooth-reset {
-	-webkit-font-smoothing: initial;
-    -moz-osx-font-smoothing: initial;
+  -moz-osx-font-smoothing: initial;
+  -webkit-font-smoothing: initial;
 }
 
 /* ------------------------------------------------------------------ */
@@ -63,16 +63,16 @@
 /* ------------------------------------------------------------------ */
 
 %full {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 %full--percent {
-    width:100%;
-    height:100%;
+  height: 100%;
+  width: 100%;
 }
 
 /* ------------------------------------------------------------------ */
@@ -80,14 +80,14 @@
 /* ------------------------------------------------------------------ */
 
 %ellipsis{
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 %center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
 }

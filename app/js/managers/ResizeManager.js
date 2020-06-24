@@ -1,27 +1,26 @@
-import {WINDOW_RESIZE} from '../utils/events'
-
 import throttle from 'lodash/throttle'
+import { WINDOW_RESIZE } from '../utils/events'
+
 import EmitterManager from './EmitterManager'
 
 class ResizeManager {
+  constructor() {
+    this.width = window.innerWidth
+    this.height = window.innerHeight
 
-	constructor() {
-		this.width = window.innerWidth
-		this.height = window.innerHeight
+    this.handleResize = throttle(this.handleResize, 100, {
+      leading: false,
+    })
 
-		this.handleResize = throttle(this.handleResize, 100, {
-			leading: false
-		})
+    window.addEventListener('resize', this.handleResize, { passive: true })
+  }
 
-		window.addEventListener('resize', this.handleResize, {passive: true})
-	}
+  handleResize() {
+    this.width = window.innerWidth
+    this.height = window.innerHeight
 
-	handleResize() {
-		this.width = window.innerWidth
-		this.height = window.innerHeight
-
-		EmitterManager.emit(WINDOW_RESIZE, this.width, this.height)
-	}
+    EmitterManager.emit(WINDOW_RESIZE, this.width, this.height)
+  }
 }
 
 export default new ResizeManager()

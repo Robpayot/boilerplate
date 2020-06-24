@@ -1,51 +1,51 @@
 .vh {
-    height: 100vh;
-    width: 100%;
-    position: relative;
+  height: 100vh;
+  position: relative;
+  width: 100%;
 }
 
 .fit {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .grayscale {
-    -webkit-filter: grayscale(100%);
-    /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
 }
 
 .object-fit-compat {
-    background-size: cover;
-    background-position: 50% 50%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 100%;
+  left: 0%;
+  position: absolute;
+  top: 0%;
+  width: 100%;
 }
 
 .center {
-    @extend %center;
+  @extend %center;
 }
 
 .center-flex {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
 .uppercase {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }

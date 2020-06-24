@@ -2,13 +2,12 @@ const path = require('path')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-
 module.exports = {
 	entry: './app/js/app.js',
 	plugins: [
 		new CleanWebpackPlugin(['dist']),
 		new HtmlWebpackPlugin({
-			title: 'cnn travel',
+			title: 'new robin\'s project',
 			template: 'app/index.html'
 		})
 	],
@@ -21,15 +20,19 @@ module.exports = {
 	},
 	module: {
 		rules: [{
-			enforce: 'pre',
-			test: /\.js$/,
-			exclude: /node_modules/,
-			use: 'eslint-loader',
-		}, {
-			test: /\.js$/,
-			exclude: /node_modules/,
-			use: ['babel-loader', 'eslint-loader']
-		}, {
+      enforce: "pre",
+      test: /\.scss$/,
+      loader: "import-glob-loader"
+    }, {
+      enforce: "pre",
+      test: /\.js$/,
+      exclude: /node_modules/,
+      loader: "eslint-loader"
+    }, {
+      test: /\.js$/,
+      exclude: /node_modules/,
+      loader: "babel-loader"
+    }, {
 			test: /\.(png|svg|jpg|gif)$/,
 			use: [
 				'file-loader'
@@ -39,6 +42,14 @@ module.exports = {
 			use: [
 				'file-loader'
 			]
-		}]
+		}, {
+      test: /\.(html)$/,
+      use: {
+        loader: 'html-loader',
+        options: {
+          attrs: [':src', ':xlink:href']
+        }
+      }
+    }]
 	}
 }
