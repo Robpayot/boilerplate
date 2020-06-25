@@ -21,7 +21,8 @@ class AppManager {
   }
 
   handleResize() {
-    if (ResizeManager.width >= 1024) { // ?
+    if (ResizeManager.width >= 1024) {
+      // ?
       Device.size = 'desktop'
     } else if (ResizeManager.width > 768) {
       Device.size = 'tablet'

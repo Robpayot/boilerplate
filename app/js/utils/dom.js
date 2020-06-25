@@ -1,32 +1,26 @@
 export function shuffleArray(o) {
-
   for (let j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
 
   return o
 }
 
 export function getAncestor(el, className) {
-
   while ((el = el.parentElement) && !el.classList.contains(className));
 
   return el
 }
 
 export function getIndex(el) {
-
   return Array.from(el.parentNode.children).indexOf(el)
 }
 
 export function getURLParameters() {
-
   const params = {}
 
   if (location.search) {
-
     const parts = location.search.substring(1).split('&')
 
     for (let i = 0; i < parts.length; i++) {
-
       const nv = parts[i].split('=')
 
       if (!nv[0]) continue
@@ -51,25 +45,20 @@ export function isWebGL() {
   // On affiche le résultat.
   if (gl && gl instanceof WebGLRenderingContext) return true
   else return false
-
 }
 
 export function isTouch() {
-
   return 'ontouchstart' in window || navigator.maxTouchPoints
 }
 
 export function isFacebookApp() {
-
   const ua = navigator.userAgent || navigator.vendor || window.opera
 
   return ua.indexOf('FBAN') > -1 || ua.indexOf('FBAV') > -1
 }
 
 export function autoBind(self) {
-
   for (const key of Object.getOwnPropertyNames(self.constructor.prototype)) {
-
     const val = self[key]
 
     if (key !== 'constructor' && typeof val === 'function') self[key] = val.bind(self)
@@ -78,19 +67,21 @@ export function autoBind(self) {
   return self
 }
 
-export function getOffsetTop(elem) { // issues on ie11
+export function getOffsetTop(elem) {
+  // issues on ie11
 
   if (!elem) {
     return 0
   }
 
   const bounds = elem.getBoundingClientRect()
-  const bodyTop = document.documentElement && document.documentElement.scrollTop || document.body.scrollTop
+  const bodyTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop
 
   return bounds.top + bodyTop
 }
 
-export function getOffsetLeft(elem) { // issues on ie11
+export function getOffsetLeft(elem) {
+  // issues on ie11
 
   if (!elem) {
     return 0
@@ -102,7 +93,7 @@ export function getOffsetLeft(elem) { // issues on ie11
   return bounds.left
 }
 
-export function parse_query_string (query) {
+export function parse_query_string(query) {
   let vars = query.split('&')
   let query_string = {}
   for (let i = 0; i < vars.length; i++) {
@@ -123,13 +114,13 @@ export function parse_query_string (query) {
 }
 
 export function IEVersion() {
-
   let myNav = navigator.userAgent.toLowerCase()
 
   return myNav.indexOf('msie') !== -1 ? parseInt(myNav.split('msie')[1]) : false
 }
 
-export function isInViewport(element) { // Determine if an element is in the visible viewport
+export function isInViewport(element) {
+  // Determine if an element is in the visible viewport
   let rect = element.getBoundingClientRect()
   let html = document.documentElement
   return (
@@ -144,7 +135,7 @@ export function getCookie(cname) {
   let name = `${cname}=`
   let decodedCookie = decodeURIComponent(document.cookie)
   let ca = decodedCookie.split(';')
-  for(let i = 0; i <ca.length; i++) {
+  for (let i = 0; i < ca.length; i++) {
     let c = ca[i]
     while (c.charAt(0) === ' ') {
       c = c.substring(1)
@@ -162,7 +153,7 @@ export function browser() {
     M = ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || []
   if (/trident/i.test(M[1])) {
     tem = /\brv[ :]+(\d+)/g.exec(ua) || []
-    return `IE ${(tem[1] || '')}`
+    return `IE ${tem[1] || ''}`
   }
   if (M[1] === 'Chrome') {
     tem = ua.match(/\b(OPR|Edge)\/(\d+)/)
