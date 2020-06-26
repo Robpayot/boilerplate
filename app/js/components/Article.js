@@ -5,5 +5,6 @@ export default class Article {
     this.ui = {
       sections: this.el.querySelectorAll('.section'),
     }
+    console.log(el)
   }
 }

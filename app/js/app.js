@@ -1,7 +1,10 @@
 import '../scss/style.scss'
-import AppManager from './managers/AppManager'
+import Article from './components/Article'
 
 (() => {
   // DOM ready
-  AppManager.start()
+  const articleEl = document.querySelector('[data-article]')
+  if (articleEl) {
+    new Article(articleEl)
+  }
 })()
