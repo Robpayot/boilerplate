@@ -1,7 +1,6 @@
 import throttle from 'lodash/throttle'
-import { WINDOW_RESIZE } from '../utils/events'
-
-import EmitterManager from './EmitterManager'
+import { WINDOW_RESIZE } from '../constants/index'
+import createCustomEvent from '../utils/createCustomEvent'
 
 class ResizeManager {
   constructor() {
@@ -13,13 +12,15 @@ class ResizeManager {
     })
 
     window.addEventListener('resize', this.handleResize, { passive: true })
+    console.log('ici')
   }
 
   handleResize() {
     this.width = window.innerWidth
     this.height = window.innerHeight
 
-    EmitterManager.emit(WINDOW_RESIZE, this.width, this.height)
+
+    window.dispatchEvent(createCustomEvent(WINDOW_RESIZE, { width: this.width, height: this.height }))
   }
 }
 
